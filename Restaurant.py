@@ -1,11 +1,18 @@
 import random
 import numpy
 
+class Dish:
+    def __init__(self, name):
+        self.name = name
+    name_dish = 'tomato'
+
+v = Dish('white wine')
+
 def random_cook_time():
     return random.randint(0, 100)
 
-dishes_string = 'spam, eggs,  tomato juice,   ham, eggs, eggs, ham, ham, ham, ham'
-# dishes_string = input('Make order please \n')
+dishes_string = v.name + ', ' + Dish.name_dish + ', spam, eggs,  tomato juice,,,,   ham, eggs, eggs, ham, ham, ham, ham'
+# dishes_string = input('Make order please(separated by comma) \n')
 dish_list = []
 
 for dish in dishes_string.title().split(','):
