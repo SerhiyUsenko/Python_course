@@ -13,4 +13,5 @@ for dish in dishes_string.title().split(','):
 unique_dish_list = numpy.unique(dish_list)
 
 for unique_dish in unique_dish_list:
-    print(unique_dish.ljust(20, '.'), random_cook_time(), 'min')
+    if unique_dish != '':
+        print(unique_dish.ljust(20, '.'), random_cook_time(), 'min')
